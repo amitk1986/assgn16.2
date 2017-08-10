@@ -1,0 +1,12 @@
+package com.diablo.HibernateUtility;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtility {
+	public static SessionFactory getSessionFactory(){
+		Configuration config = new Configuration();
+		config.configure("hibernate.cfg.xml");
+		return config.buildSessionFactory();
+	}
+}
